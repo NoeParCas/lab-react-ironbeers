@@ -14,7 +14,7 @@ function SingleBeer() {
   //4. useEffect que llamará al componentDidMount
   useEffect(() => {
     getSingleBeer();
-  });
+  },[]);
   //5. funcion que llama la data de la Api
   const getSingleBeer = async () => {
     const response = await axios.get(

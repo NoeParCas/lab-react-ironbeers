@@ -1,11 +1,13 @@
 import React from 'react'
+import { FormGroup } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import beerHome from "./../assets/beerHome.png";
 
 
 function Header() {
   return (
-    <div>
-         <Link to={"/"} ><h2>Home</h2></Link>
+    <div className="header">
+         <Link to={"/"} ><img src={beerHome} alt="beerHome" width="50px"/></Link>
     </div>
   )
 }

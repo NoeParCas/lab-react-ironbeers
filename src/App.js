@@ -8,6 +8,7 @@ import ListBeers from './pages/ListBeers';
 import RandomBeer from './pages/RandomBeer';
 import NewBeer from './pages/NewBeer';
 import SingleBeer from './pages/SingleBeer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

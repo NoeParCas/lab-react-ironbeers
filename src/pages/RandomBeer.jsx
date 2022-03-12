@@ -9,17 +9,19 @@ function RandomBeer() {
 
   //2. useEffect que llamará al componentDidMount
   useEffect(() => {
-   getRandomBeer()
+    getRandomBeer();
   }, []);
 
   //3. funcion que llama la data de la Api
-  const getRandomBeer = async() => {
-    const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers/random")
+  const getRandomBeer = async () => {
+    const response = await axios.get(
+      "https://ih-beers-api2.herokuapp.com/beers/random"
+    );
     // console.log(response.data)
-    setRandomBeer(response.data)
-}
+    setRandomBeer(response.data);
+  };
 
-if(!randomBeer) return <h2>...is Loading</h2>
+  if (!randomBeer) return <h2>...is Loading</h2>;
 
   return (
     <div>

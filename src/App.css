@@ -109,3 +109,40 @@
 .beer-contributed{
   color:grey;
 }
+
+/* FORM */
+
+.form-input{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-input input{
+  max-width: 400px;
+  display: flex;
+  align-self: center;
+  border-radius: 50px;
+  border-color: #bfbfbf;
+}
+
+.form-input-description{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-input-description textarea{
+  max-width: 400px;
+  height: 100px;
+  display: flex;
+  align-self: center;
+  border-radius: 10px;
+  border-color: #bfbfbf;
+}
+
+form button{
+  border-radius: 50px;
+  background-color:  #2081c3;
+  color:white;
+}

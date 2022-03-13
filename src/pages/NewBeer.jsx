@@ -29,7 +29,7 @@ function NewBeer() {
       contributedBy,
     };
     await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer);
-
+    console.log(newBeer);
     //redireccionar el usuario a "/beers"
     navigate("/beers");
   };
@@ -39,7 +39,7 @@ function NewBeer() {
       <Header />
       <h2>New Beer</h2>
       <form onSubmit={handleSubmit}>
-      <div>
+      <div className="form-input">
         <label htmlFor='name'>Name</label>
         <input
           type='text'
@@ -48,7 +48,7 @@ function NewBeer() {
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-        <div>
+        <div className="form-input">
         <label htmlFor='tagline'>Tagline</label>
         <input
           type='text'
@@ -58,16 +58,25 @@ function NewBeer() {
         />
         </div>
         
-        <div>
+        <div className="form-input-description">
         <label htmlFor='description'>Description</label>
-        <input
-          type='text'
+        <textarea
+        type='text'
           name='description'
+          maxLength="100"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-        />
+        >
+        </textarea>
+        {/* <input
+          type='text'
+          name='description'
+          maxlength="100"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        /> */}
         </div>
-        <div>
+        <div className="form-input">
 
         <label htmlFor='firstBrewed'>First Brewed</label>
         <input
@@ -78,6 +87,7 @@ function NewBeer() {
         />
         </div>
         
+        <div className="form-input"> 
         <label htmlFor='brewersTips'>Brewers Tips</label>
         <input
           type='text'
@@ -85,7 +95,8 @@ function NewBeer() {
           value={brewersTips}
           onChange={(e) => setBrewersTips(e.target.value)}
         />
-        
+        </div>
+        <div className="form-input">
         <label htmlFor='attenuationLevel'>Attenuation Level</label>
         <input
           type='number'
@@ -93,7 +104,9 @@ function NewBeer() {
           value={attenuationLevel}
           onChange={(e) => setAttenuationLevel(e.target.value)}
         />
-        
+        </div>
+        <div className="form-input">
+
         <label htmlFor='contributedBy'>Contributed by</label>
         <input
           type='text'
@@ -101,6 +114,7 @@ function NewBeer() {
           value={contributedBy}
           onChange={(e) => setContributedBy(e.target.value)}
         />
+        </div>
         
         <button>ADD NEW</button>
       </form>

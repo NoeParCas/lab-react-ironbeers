@@ -26,14 +26,29 @@ function RandomBeer() {
   return (
     <div>
       <Header />
+
       <h2>Random Beer</h2>
+      <div className="beer-container">
       <img src={randomBeer.image_url} alt={randomBeer.name} width='50px' />
+      <div className="beer-info">
+
+      <div className="beer-namtag">
       <h3>{randomBeer.name}</h3>
       <p>{randomBeer.tagline}</p>
-      <p>{randomBeer.first_brewed}</p>
+      </div>
+
+      <div className="beer-levbrew">
       <p>{randomBeer.attenuation_level}</p>
+      <span>{randomBeer.first_brewed}</span>
+      </div>
+
+      </div>
+
       <p>{randomBeer.description}</p>
-      <p>{randomBeer.contributed_by}</p>
+      <div>
+      <p className="beer-contributed">{randomBeer.contributed_by}</p>
+      </div>
+      </div>
     </div>
   );
 }

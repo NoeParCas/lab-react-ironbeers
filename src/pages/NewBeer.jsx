@@ -39,6 +39,7 @@ function NewBeer() {
       <Header />
       <h2>New Beer</h2>
       <form onSubmit={handleSubmit}>
+      <div>
         <label htmlFor='name'>Name</label>
         <input
           type='text'
@@ -46,7 +47,8 @@ function NewBeer() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <br />
+      </div>
+        <div>
         <label htmlFor='tagline'>Tagline</label>
         <input
           type='text'
@@ -54,7 +56,9 @@ function NewBeer() {
           value={tagline}
           onChange={(e) => setTagline(e.target.value)}
         />
-        <br />
+        </div>
+        
+        <div>
         <label htmlFor='description'>Description</label>
         <input
           type='text'
@@ -62,7 +66,9 @@ function NewBeer() {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <br />
+        </div>
+        <div>
+
         <label htmlFor='firstBrewed'>First Brewed</label>
         <input
           type='text'
@@ -70,7 +76,8 @@ function NewBeer() {
           value={firstBrewed}
           onChange={(e) => setFirstBrewed(e.target.value)}
         />
-        <br />
+        </div>
+        
         <label htmlFor='brewersTips'>Brewers Tips</label>
         <input
           type='text'
@@ -78,7 +85,7 @@ function NewBeer() {
           value={brewersTips}
           onChange={(e) => setBrewersTips(e.target.value)}
         />
-        <br />
+        
         <label htmlFor='attenuationLevel'>Attenuation Level</label>
         <input
           type='number'
@@ -86,7 +93,7 @@ function NewBeer() {
           value={attenuationLevel}
           onChange={(e) => setAttenuationLevel(e.target.value)}
         />
-        <br />
+        
         <label htmlFor='contributedBy'>Contributed by</label>
         <input
           type='text'
@@ -94,7 +101,7 @@ function NewBeer() {
           value={contributedBy}
           onChange={(e) => setContributedBy(e.target.value)}
         />
-        <br />
+        
         <button>ADD NEW</button>
       </form>
     </div>

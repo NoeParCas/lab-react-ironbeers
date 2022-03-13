@@ -33,14 +33,24 @@ function SingleBeer() {
     <div>
       <Header />
       <h2>Single Beer</h2>
-      <div>
+      <div className="beer-container">
         <img src={beerDetails.image_url} alt={beerDetails.name} width='50px' />
+        <div className="beer-info">
+
+        <div className="beer-namtag"> 
         <h3>{beerDetails.name}</h3>
         <p>{beerDetails.tagline}</p>
-        <p>{beerDetails.first_brewed}</p>
+        </div>
+        <div className="beer-levbrew"> 
         <p>{beerDetails.attenuation_level}</p>
+        <span>{beerDetails.first_brewed}</span>
+        </div>
+
+        </div>
         <p>{beerDetails.description}</p>
-        <p>{beerDetails.contributed_by}</p>
+        <div>
+        <p className="beer-contributed">{beerDetails.contributed_by}</p>
+        </div>
       </div>
     </div>
   );
